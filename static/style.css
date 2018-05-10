@@ -1,3 +1,167 @@
+@keyframes rainbow-text {
+  0% {
+    color: #e87d7d;
+  }
+  2% {
+    color: #e88a7d;
+  }
+  4% {
+    color: #e8977d;
+  }
+  6% {
+    color: #e8a47d;
+  }
+  8% {
+    color: #e8b07d;
+  }
+  10% {
+    color: #e8bd7d;
+  }
+  12% {
+    color: #e8ca7d;
+  }
+  14% {
+    color: #e8d77d;
+  }
+  16% {
+    color: #e8e47d;
+  }
+  18% {
+    color: #dfe87d;
+  }
+  20% {
+    color: #d3e87d;
+  }
+  22% {
+    color: #c6e87d;
+  }
+  24% {
+    color: #b9e87d;
+  }
+  26% {
+    color: #ace87d;
+  }
+  28% {
+    color: #9fe87d;
+  }
+  30% {
+    color: #92e87d;
+  }
+  32% {
+    color: #86e87d;
+  }
+  34% {
+    color: #7de881;
+  }
+  36% {
+    color: #7de88e;
+  }
+  38% {
+    color: #7de89b;
+  }
+  40% {
+    color: #7de8a8;
+  }
+  42% {
+    color: #7de8b5;
+  }
+  44% {
+    color: #7de8c1;
+  }
+  46% {
+    color: #7de8ce;
+  }
+  48% {
+    color: #7de8db;
+  }
+  50% {
+    color: #7de8e8;
+  }
+  52% {
+    color: #7ddbe8;
+  }
+  54% {
+    color: #7dcee8;
+  }
+  56% {
+    color: #7dc1e8;
+  }
+  58% {
+    color: #7db5e8;
+  }
+  60% {
+    color: #7da8e8;
+  }
+  62% {
+    color: #7d9be8;
+  }
+  64% {
+    color: #7d8ee8;
+  }
+  66% {
+    color: #7d81e8;
+  }
+  68% {
+    color: #867de8;
+  }
+  70% {
+    color: #927de8;
+  }
+  72% {
+    color: #9f7de8;
+  }
+  74% {
+    color: #ac7de8;
+  }
+  76% {
+    color: #b97de8;
+  }
+  78% {
+    color: #c67de8;
+  }
+  80% {
+    color: #d37de8;
+  }
+  82% {
+    color: #df7de8;
+  }
+  84% {
+    color: #e87de4;
+  }
+  86% {
+    color: #e87dd7;
+  }
+  88% {
+    color: #e87dca;
+  }
+  90% {
+    color: #e87dbd;
+  }
+  92% {
+    color: #e87db0;
+  }
+  94% {
+    color: #e87da4;
+  }
+  96% {
+    color: #e87d97;
+  }
+  98% {
+    color: #e87d8a;
+  }
+  100% {
+    color: #e87d7d;
+  }
+}
+.rainbow-text {
+  animation: rainbow-text 1s infinite;
+}
+
+
+
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 *:focus {
   outline: none;
@@ -36,8 +200,9 @@ body {
 
 h1 {
   margin: 0 0 20px 0;
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: 100;
+  font-size: 8px;
+  color: #e3650d;
 }
 
 input[type="text"],
@@ -76,6 +241,8 @@ input[type="submit"] {
   text-transform: uppercase;
   transition: 0.1s ease;
   cursor: pointer;
+  color: black !important;
+  background: orange !important;
 }
 
 input[type="submit"]:hover,
@@ -163,7 +330,6 @@ button.social-signin.google {
 }
 
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
   width: 360px;
@@ -210,7 +376,7 @@ button.social-signin.google {
 }
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
+  color: #e26c0e;
   font-size: 12px;
 }
 .form .message a {
@@ -345,20 +511,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
 .art-postcontent h1
 {
    margin: 21px 0 21px 0;
-   color: #FFFFFF;
+   color: #e3650d;
+   font-size: 8px;
 
 }
 
 .art-postcontent h2
 {
-    color: #FFFFFF;
+   color: #FFFFFF;
    margin: 19px 0 19px 0;
    font-size: 24px;
 }
 
 .art-postcontent h3
 {
-   margin: 19px 0 19px 0;
+  margin: 19px 0 19px 0;
   color: #FFFFFF;
   font-size: 19px;
 }
@@ -466,6 +633,15 @@ table.position
   min-height: 13px;
 }
 
+.art-sheet_mer
+{
+  position: relative;
+  margin: 0 auto;
+  min-width: 13px;
+  min-height: 13px;
+  margin-top: -80px;
+}
+
 .art-sheet-body
 {
   position: relative;
@@ -567,7 +743,7 @@ table.position
   top: 100px !important;
   margin-bottom: 100px !important;
   cursor:auto;
-  width: 800px;
+  width: 980px;
 }
 
 
@@ -923,6 +1099,7 @@ div.art-logo
   left: 10px;
   top: 155px;
   width: 314px;
+  margin-left: 90px;
 }
 
 h1.art-logo-name
@@ -1035,10 +1212,12 @@ h2.art-logo-text
 
 .art-vmenublockheader h3.t
 {
-  margin:0;
+  margin-left: 14px;
   padding: 0 10px 0 10px;
   white-space: nowrap;
   line-height: 33px;
+  color:black ;
+
 }
 
 /* end BlockHeader, VMenuBlockHeader */
@@ -1496,6 +1675,8 @@ input, select, textarea
   vertical-align: middle;
   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-size: 13px;
+  width: 153px !important;
+
 }
 
 .art-block select

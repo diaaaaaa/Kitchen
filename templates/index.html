@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 	<head>
-		<!--  Created by Artisteer v3.0.0.32906  Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"  -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Home</title>
 		<link rel="stylesheet" href="./static/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<!--[if IE 6]><link rel="stylesheet" href="./style.ie6.css" type="text/css" media="screen" /><![endif]-->
 		<!--[if IE 7]><link rel="stylesheet" href="./style.ie7.css" type="text/css" media="screen" /><![endif]-->
 		<script type="text/javascript" src="./static/jquery.js"></script>
@@ -14,7 +14,6 @@
 		<div id="art-page-background-glare">
 			<div id="art-page-background-glare-image">
 				<div id="art-main">
-
 					<div class="art-sheet">
 						<div class="art-sheet-tl"></div>
 						<div class="art-sheet-tr"></div>
@@ -31,16 +30,19 @@
 								<div class="r"></div>
 								<ul class="art-menu">
 									{% if session.user_id %}
-									<li><a href="./index.html" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Home</span></a></li>
-									<li><a href="./Suggesions.html"><span class="l"> </span><span class="r"> </span><span class="t">Suggesions</span></a></li>
-									<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">Shopper</span></a></li>
-									<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">History</span></a></li>
-									<li><a href="./about-us.html"><span class="l"> </span><span class="r"> </span><span class="t">About us</span></a></li>
-									<li><a href="./contact-us.html"><span class="l"> </span><span class="r"> </span><span class="t">Contact us</span></a></li>
-                                    <li><a href="./contact-us.html" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Log out</span></a></li>
+									<!-- <li><a href="./index.html" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Home</span></a></li>-->
+									<li><a href="/addsug"><span class="l"> </span><span class="r"> </span><span class="t">Suggesions</span></a></li>
+									<li><a href="/listmeal"><span class="l"> </span><span class="r"> </span><span class="t">Meal List</span></a></li>
+									<li><a href="/addRate" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Rating</span></a></li>
+									<li><a href="/search"><span class="l"> </span><span class="r"> </span><span class="t">search</span></a></li>
+									<li><a href="/about"><span class="l"> </span><span class="r"> </span><span class="t">About us</span></a></li>
+									<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">Units</span></a></li>
+									<li><a href="/configer"><span class="l"> </span><span class="r"> </span><span class="t">Configer</span></a></li>
+									<li><a href="/logout" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Log out</span></a></li>
+
                                     {% else %}
 										<li><a href="/login"><span class="l"> </span><span class="r"> </span><span class="t">Log in</span></a></li>
-										<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">Register</span></a></li>
+										<li><a href="/register"><span class="l"> </span><span class="r"> </span><span class="t">Register</span></a></li>
                                     {% endif %}
 
 								</ul>
@@ -57,24 +59,45 @@
 							<div class="art-content-layout">
 								<div class="art-content-layout-row">
 									<div class="art-layout-cell art-sidebar1">
-										<div class="art-vmenublock">
-											<div class="art-vmenublock-body">
-												<div class="art-vmenublockheader">
-													<h3 class="t">Vertical Menu</h3>
-												</div>
+										<div>
 
-												<div class="art-vmenublockcontent">
-													<div class="art-vmenublockcontent-body">
-														<ul class="art-vmenu">
-															<li><a href="./home.html" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Home</span></a></li>
-															<li><a href="./Suggesion.html"><span class="l"> </span><span class="r"> </span><span class="t">Suggesion</span></a></li>
-															<li><a href="./units.html"><span class="l"> </span><span class="r"> </span><span class="t">Shopper</span></a></li>
-															<li><a href="./units.html"><span class="l"> </span><span class="r"> </span><span class="t">History</span></a></li>
-															<li><a href="./about-us.html"><span class="l"> </span><span class="r"> </span><span class="t">About us</span></a></li>
-															<li><a href="./contact-us.html"><span class="l"> </span><span class="r"> </span><span class="t">Contact us</span></a></li>
+                                   {% if session.user_id %}
+                                         <div class="w3-content w3-display-container" style ="border: 4px solid orange;">
 
-														</ul>
+                                         </style>
+						                       <img class="mySlides" src="/static/1.jpeg" style="width:100% ; height:450px">
+						                       <img class="mySlides" src="/static/2.jpeg" style="width:100% ; height:450px">
+						                       <img class="mySlides" src="/static/3.jpg" style="width:100% ; height:450px">
+						                       <img class="mySlides" src="/static/4.jpg" style="width:100% ; height:450px">
+						                       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+						                       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+						                  </div>
+
+                             <script>
+									var slideIndex = 1;
+									showDivs(slideIndex);
+
+									function plusDivs(n) {
+									  showDivs(slideIndex += n);
+									}
+
+									function showDivs(n) {
+									  var i;
+									  var x = document.getElementsByClassName("mySlides");
+									  if (n > x.length) {slideIndex = 1}
+									  if (n < 1) {slideIndex = x.length}
+									  for (i = 0; i < x.length; i++) {
+									     x[i].style.display = "none";
+									  }
+									  x[slideIndex-1].style.display = "block";
+									}
+							</script>
+							   {% else %}
+
+
+
 														<div class="cleared"></div>
+
 													</div>
 												</div>
 												<div class="cleared"></div>
@@ -88,15 +111,25 @@
 											<div class="art-post-cc"></div>
 											<div class="art-post-body">
 												<div class="art-post-inner art-article">
-													<h2 class="art-postheader">Home</h2>
+													<h2 class="art-postheader" style="color: rgb(172,163,163);">Purpose:</h2>
 													<div class="art-postcontent">
-														<h2><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);"> </span></span><span style="text-transform: none; "><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed massa purus, non tincidunt ante. Morbi laoreet nunc a odio adipiscing eleifend. Suspendisse egestas feugiat lectus, id iaculis mauris suscipit vel. Nullam vel orci id nulla scelerisque venenatis. </span></span></span></h2>
+														<h3><span style="font-size: 16px;"><span style="color: rgb(247, 247, 247);"> </span></span><span style="text-transform: none; "><span style="font-size: 16px;"><span style="color: rgb(245,182,57);">Let’s cook together, the easier way.
+
+                                                                                    What’s the problem: Sharing food has a connecting function. But cooking takes time and preparation and overview. Through a simple cooking / scheduling app we can take away the pain and make sure we have at least one meal together every week. </span></span></span></h3>
 														<p><span style="text-transform: none; "><span style="font-size: 16px;"><span style="color: rgb(255, 255, 255);"><br /></span></span></span></p>
-														<p><span style="font-size: 14px;">Phasellus rutrum, lacus nec iaculis imperdiet, risus ligula volutpat turpis, quis pharetra erat nibh ut elit. Phasellus eu vulputate odio. Maecenas posuere congue ipsum et tristique. </span></p>
-														<p><span style="font-size: 14px;"><br /></span></p>
-														<p><span style="font-size: 14px;">Sed varius libero at ligula ornare bibendum. Aliquam non nunc est, eget commodo mi. Mauris porta, nulla sit amet mollis pharetra, sem mauris cursus dui, at laoreet ipsum justo sed turpis. </span></p>
-														<p><span style="font-size: 14px;"><br /></span></p>
-														<p><span style="font-size: 14px;">Vestibulum rhoncu</span><span style="font-size: 14px;">s egestas odio in varius. Vestibulum tempor, nisi sed ullamcorper porta, nunc diam euismod mauris, nec egestas quam lectus ut felis. Pellentesque tellus urna, faucibus ut volutpat non, tempor nec justo. </span><span style="color: rgb(247, 247, 247); font-family: Arial, Helvetica, sans-serif; "><span style="font-size: 14px;"> luctus et euismod vel, posuere in </span></span></p>
+														<p><span style="font-size: 16px;">User Stories: </span></p>
+														<ul>
+															<li  style="color: rgb(153,102,51);">As a cook, I like to pick the dish and allow people to sign up for eating.</li>
+															<li  style="color: rgb(153,102,51);">As a cook, I like to write a shopping list for others to buy.</li>
+															<li  style="color: rgb(153,102,51);">As an anti-cook, I can do the shopping because everything I touch burns down.</li>
+															<li  style="color: rgb(153,102,51);">As someone with no time this week I just want to sign up for the meal.</li>
+															<li  style="color: rgb(153,102,51);">As a cleaner I want to say thank you by promising to clean the kitchen afterwards</li>
+															<li  style="color: rgb(153,102,51);">As a normally talented person, I can sign up for cutting vegetables or helping the chef cook.</li>
+															<li  style="color: rgb(153,102,51);">As someone who cares about fairness, it’s nice to earn points for each role.</li>
+															<li  style="color: rgb(153,102,51);">As someone who’s hungry I want to see what’s on the menu this week.</li>
+															<li  style="color: rgb(153,102,51);">As someone who cares about money, I want to split up the costs between all participants.</li>
+														</ul>
+														<p><span style="font-size: 14px;"><br/></span></p>
 														<p><span style="color: rgb(247, 247, 247); font-family: Arial, Helvetica, sans-serif; "><span style="font-size: 14px;"><br /></span></span></p>
 													</div>
 													<div class="cleared"></div>
@@ -108,6 +141,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="cleared"></div>
 							<div class="art-footer">
 								<div class="art-footer-t"></div>
@@ -117,7 +151,7 @@
 								<div class="art-footer-body">
 									<div class="art-footer-text">
 										<p><a href="./#">Link1</a> | <a href="./#">Link2</a> | <a href="./#">Link3</a></p>
-										<p>Copyright © 2012. All Rights Reserved.</p>
+										<p>Copyright © 2018. All Rights Reserved.</p>
 									</div>
 									<div class="cleared"></div>
 								</div>
@@ -125,10 +159,10 @@
 							<div class="cleared"></div>
 						</div>
 					</div>
-					<div class="cleared"></div>
-					<p class="art-page-footer">Designed by <a href="http://www.tworzenie-stron-internetowych.biz.pl/">tworzenie stron internetowych</a>.</p>
-				</div>
+
+					</div>
 			</div>
 		</div>
+		{% endif %}
 	</body>
 </html>

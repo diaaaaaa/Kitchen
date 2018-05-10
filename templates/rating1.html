@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<title>Kitchen Application</title>
+		<link rel="stylesheet" href="././static/style.css" type="text/css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" href="./style.ie6.css" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="./style.ie7.css" type="text/css" media="screen" /><![endif]-->
+		<script type="text/javascript" src="./static/jquery.js"></script>
+		<script type="text/javascript" src="./static/script1.js"></script>
+		<script type="text/javascript" src="./static/script.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="./static/emotion-ratings.js"></script>
+
+<style>
+body { color:#fff; font-family:'Roboto'; text-align:center;}
+.container {margin:25px auto;}
+h1 { margin-bottom:100px;}
+</style>
+	</head>
+	<body>
+<!---->
+
+
+		<input type="text" id="mealid" name="mealid"  value ={{meilId}} hidden=true >
+		<div id="art-page-background-glare">
+			<div id="art-page-background-glare-image">
+				<div id="art-main">
+					<div class="art-sheet">
+						<div class="art-sheet-tl"></div>
+						<div class="art-sheet-tr"></div>
+						<div class="art-sheet-bl"></div>
+						<div class="art-sheet-br"></div>
+						<div class="art-sheet-tc"></div>
+						<div class="art-sheet-bc"></div>
+						<div class="art-sheet-cl"></div>
+						<div class="art-sheet-cr"></div>
+						<div class="art-sheet-cc"></div>
+						<div class="art-sheet-body">
+						<div class="art-nav">
+						<div class="l"></div>
+						<div class="r"></div>
+						<ul class="art-menu">
+						<li><a href="/"></a> <span class="active"><span class="l"> </span><span class="r"> </span><span class="t">Home</span></a></li>
+						<li><a href="/addsug"><span class="l"> </span><span class="r"> </span><span class="t">Suggesions</span></a></li>
+						<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">History</span></a></li>
+						<li><a href="/about-us.html"><span class="l"> </span><span class="r"> </span><span class="t">About us</span></a></li>
+						</ul>
+						</div>
+    	<table style="height:300px">
+     	<tr>
+     	<td valign=top>
+     	    <table>
+     	    <tr>
+             	<td align="left" ><div class="art-vmenublockheader"><h3 class="t" style="color:#6495ED ; font-weight: bold; font-size: 15px;">Meal Name</h3></div></td>
+             	<td align="left"><div class="art-vmenublockheader"><h3 class="t" style="color:#6495ED ; font-weight: bold; font-size: 15px;">Date</h3></div></td>
+				<td  align="left"><div class="art-vmenublockheader"><h3 class="t" style="color:#6495ED ; font-weight: bold; font-size: 15px;">Cooker</h3></div></td>
+			</tr>
+			<tr>
+				<td align="left"><div class="art-vmenublockheader" ><h3 class="t"  style="font-size: 15px" >{{ mealname }}</h3></div></td>
+				<td align="left"><div class="art-vmenublockheader"><h3 class="t"  style="font-size: 15px">{{ mealdate }}</h3></div></td>
+			  	<td colspan=3 align="left" ><div class="art-vmenublockheader"><h3 class="t" style="font-size: 15px">{{ mealcooker }}</h3></div></td>
+			</tr>
+			<tr>
+				<td colspan=3>
+					<!--	<td colspan=2 align="center"><div class="art-vmenublockheader"><h3 class="t" style="color:#6495ED ; font-weight: bold; font-size: 20px;">Male picture</h3></div></td> -->
+					<img src="/static/3.jpg"  alt="" style="width:375px; height:160px ; border: 2px solid #6495ED;">
+				</td>
+			</tr>
+		   </table>
+		</td>
+		<td valign=top>
+		<table >
+			<tr><td valign="top" style="height:50px"><div class="jquery-script-clear"></div><div class="container"><div id="element"></div></div><script>buildRatingemotion();</script></td></tr>
+			<tr><td><textarea name="comment" placeholder= "Write your Comment" form="usrform" style="width:400px; height:160px"></textarea></td></tr>
+		</table>
+		</td>
+        </tr>
+        <tr><td colspan=2><form class="login-form" acion="/rating" method="post"><button class="btn btn-primary" type="submit">Add Comment</button></form></td></tr>
+        </table>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

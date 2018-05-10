@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<title>Kitchen Application</title>
+		<link rel="stylesheet" href="././static/style.css" type="text/css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" href="./style.ie6.css" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="./style.ie7.css" type="text/css" media="screen" /><![endif]-->
+		<script type="text/javascript" src="./static/jquery.js"></script>
+		<script type="text/javascript" src="./static/script1.js"></script>
+		<script type="text/javascript" src="./static/script.js"></script>
+	</head>
+	<body>
+		<div id="art-page-background-glare">
+			<div id="art-page-background-glare-image">
+				<div id="art-main">
+					<div class="art-sheet">
+						<div class="art-sheet-tl"></div>
+						<div class="art-sheet-tr"></div>
+						<div class="art-sheet-bl"></div>
+						<div class="art-sheet-br"></div>
+						<div class="art-sheet-tc"></div>
+						<div class="art-sheet-bc"></div>
+						<div class="art-sheet-cl"></div>
+						<div class="art-sheet-cr"></div>
+						<div class="art-sheet-cc"></div>
+						<div class="art-sheet-body">
+							<div class="art-nav">
+								<div class="l"></div>
+								<div class="r"></div>
+								<ul class="art-menu">
+						            <li><a href="/"><span class="l"> </span><span class="r"> </span><span class="t">Home</span></a></li>
+	                                <li><a href="/listmeal"><span class="l"> </span><span class="r"> </span><span class="t">Meal List</span></a></li>
+									<li><a href="/addRate" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Rating</span></a></li>
+									<li><a href="/search"><span class="l"> </span><span class="r"> </span><span class="t">search</span></a></li>
+									<li><a href="/about"><span class="l"> </span><span class="r"> </span><span class="t">About us</span></a></li>
+									<li><a href="/units"><span class="l"> </span><span class="r"> </span><span class="t">Units</span></a></li>
+									<li><a href="/configer"><span class="l"> </span><span class="r"> </span><span class="t">Configer</span></a></li>
+									<li><a href="/logout" class="active"><span class="l"> </span><span class="r"> </span><span class="t">Log out</span></a></li>
+						</ul>
+						</div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Meal Name</th>
+                <th>Meal Description</th>
+                <th>Date</th>
+                <th>Cook</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>{{ mealName }}</td>
+                <td>{{ mealDes }}</td>
+                <td>{{ mealDate }}</td>
+                <td>{{ cook }}</td>
+            </tr>
+
+
+        </tbody>
+
+    </table>
+            <form action="/addrecord" method="post">
+                <input autocomplete="off" autofocus class="form-control" name="mealid"  hidden value ={{mealid}} placeholder="mealid" type="text"/>
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                <th>Material</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                </tr>
+                </thead>
+                <tr>
+                <td><input autocomplete="off" autofocus class="form-control" name="name" placeholder="material name" type="text"/></td>
+                <td><input autocomplete="off" autofocus class="form-control" name="quantity" min=1 placeholder="quantity" type="number"/></td>
+                <td>
+                    <select class="form-control" name="unit">
+                {% for unit in units %}
+                    <option value="{{ unit.id }}">{{ unit.description }}</option>
+                {% endfor %}
+                </select>
+                </td>
+                <td><button class="btn btn-primary" type="submit">Add</button></td>
+                </tr>
+
+                {% for material in materials %}
+                <tr>
+                <th><label for="name">{{material.material}}</label></th>
+                <th><label for="quantity">{{material.quntity}}</label></th>
+                <th><label for="unit">{{material.unit}}</label></th>
+                <form action="/delrecord" method="post">
+                <th><button class="btn btn-primary" name="delrecord" value={{mealid}} type="submit"  >Delete</button></th>
+                </form>
+                {% endfor %}
+                </tr>
+</form>
+
+
+            </tr>
+
+            <tr>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+
+          </tr>
+
+        </tbody>
+
+    </table>
+	</div>
+			</div>
+		</div>
+		</div>
+            </div>
+            </div>
+
+	</body>
+</html>
